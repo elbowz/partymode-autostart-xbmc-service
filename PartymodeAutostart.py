@@ -68,13 +68,13 @@ class Main:
                 log('Avoid PartyMode on Screensaver because something is paused')
 
             else:
-                xbmc.executebuiltin((u'Notification(%s,%s,%s,%s)' % (__addonname__, __language__(31000), 6000, __icon__)).encode('utf-8', 'ignore'))
+                xbmc.executebuiltin((u'Notification(%s,%s,%s,%s)' % (__addonname__, __language__(30100), 6000, __icon__)).encode('utf-8', 'ignore'))
 
                 self.runPartyMode()
 
     def _viewCountdown(self):
         conutdownDlg = xbmcgui.DialogProgress()
-        conutdownDlg.create( __language__(31001), __language__(31002) % self.delayStartupPartyMode)
+        conutdownDlg.create( __language__(30101), __language__(30102) % self.delayStartupPartyMode)
 
         finished = True
         countdownGap = 100

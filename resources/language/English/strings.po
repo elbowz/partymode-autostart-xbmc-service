@@ -54,14 +54,14 @@ msgstr ""
 
 # ADDONS STRINGS
 
-msgctxt "#31000"
+msgctxt "#30100"
 msgid "Run PartyMode on Screensaver"
 msgstr ""
 
-msgctxt "#31001"
+msgctxt "#30101"
 msgid "Countdown"
 msgstr ""
 
-msgctxt "#31002"
+msgctxt "#30102"
 msgid "PartyMode start in %s seconds:"
 msgstr ""
