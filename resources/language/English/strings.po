@@ -52,7 +52,7 @@ msgctxt "#30042"
 msgid "Avoid whenever player is on pause"
 msgstr ""
 
-# ADDONS STRINGS
+# ADDON STRINGS
 
 msgctxt "#30100"
 msgid "Run PartyMode on Screensaver"

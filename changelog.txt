@@ -1,2 +1,5 @@
-[B]0.6.0b[/B]
+0.6.6b
+- Added PartyMode Autostart to programs
+
+0.6.0b
 - Hello PartyMode Autostart :)

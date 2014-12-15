@@ -126,6 +126,6 @@ class serviceMonitor(xbmc.Monitor):
         self.onScreensaverActivatedAction = action
 
 if __name__ == "__main__":
-    log('script version %s started' % __addonversion__)
+    log('service version %s started' % __addonversion__)
 
     Main()

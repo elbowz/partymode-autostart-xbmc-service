@@ -6,7 +6,9 @@
     <requires>
         <import addon="xbmc.python" version="2.12.0"/>
     </requires>
-    <extension point="xbmc.service" library="PartymodeAutostart.py" start="login">
+    <extension point="xbmc.service" library="PartymodeAutostart.py" start="login"/>
+    <extension point="xbmc.python.script" library="main.py">
+        <provides>executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en">PartyMode Autostart</summary>
