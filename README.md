@@ -2,7 +2,7 @@ XBMC PartyMode Autostart
 =====================
 
 ### Info
-This service simply executes party mode on Kodi startup or on screensaver.
+This service simply executes party mode or playlist on Kodi startup or on screensaver.
 
 Install, enable it (if not already) and enjoy!
 
