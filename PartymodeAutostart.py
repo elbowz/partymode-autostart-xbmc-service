@@ -42,8 +42,13 @@ class Main:
 
         self.visualisationPartymode                     = __addon__.getSetting('visualisation-partymode') == 'true'
         self.delayVisualisationPartyMode                = int(__addon__.getSetting('delay-visualisation-partymode'))
+        
+	self.volumePartyMode                = int(__addon__.getSetting('volume-partymode'))
+        self.volumeBarPartyMode                = __addon__.getSetting('volume-bar-partymode') == 'true'
 
     def runPartyMode(self):
+        xbmc.executebuiltin("XBMC.SetVolume(%d,false)" % self.volumePartyMode)
+
         if self.startupPlaylist:
 
             log('Start Playlist: ' + self.startupPlaylistPath)
@@ -56,6 +61,9 @@ class Main:
             xbmc.executebuiltin("XBMC.PlayerControl(PartyMode)")
 
         self.activateVisualisation()
+
+        if (self.volumeBarPartyMode):
+            xbmc.executebuiltin("XBMC.SetVolume(%d,true)" % self.volumePartyMode)
 
     def activateVisualisation(self):
         if self.visualisationPartymode:

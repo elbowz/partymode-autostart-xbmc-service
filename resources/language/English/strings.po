@@ -60,6 +60,14 @@ msgctxt "#30043"
 msgid "Select a playlist"
 msgstr ""
 
+msgctxt "#30044"
+msgid "Volume (%)"
+msgstr ""
+
+msgctxt "#30045"
+msgid "Show Volume Bar"
+msgstr ""
+
 # ADDON STRINGS
 
 msgctxt "#30100"
