@@ -18,6 +18,14 @@ def log(txt):
     message = u'%s: %s' % (__addonid__, txt)
     xbmc.log(msg=message.encode("utf-8"), level=xbmc.LOGDEBUG)
 
+def executeJSONRPC(jsonStr):
+    import json
+
+    response = json.loads(xbmc.executeJSONRPC(jsonStr))
+    response = response['result'] if 'result' in response else response
+
+    return response
+
 class Main:
     def __init__(self):
         # catch: addon settings change and Screensaver start
@@ -45,11 +53,10 @@ class Main:
         
         self.volumePartyMode                            = __addon__.getSetting('volume-partymode') == 'true'
         self.volumeLevelPartyMode                       = int(__addon__.getSetting('volume-level-partymode'))
-        self.volumeBarPartyMode                         = __addon__.getSetting('volume-bar-partymode') == 'true'
 
     def runPartyMode(self):
-        if (self.volumePartyMode):
-            xbmc.executebuiltin("XBMC.SetVolume(%d,false)" % self.volumeLevelPartyMode)
+        if self.volumePartyMode:
+            executeJSONRPC('{{"jsonrpc": "2.0", "method": "Application.SetVolume", "params": {{ "volume": {0}}}, "id": 1}}'.format(self.volumeLevelPartyMode))
 
         if self.startupPlaylist:
 
@@ -64,9 +71,6 @@ class Main:
 
         self.activateVisualisation()
 
-        if (self.volumePartyMode):
-            if (self.volumeBarPartyMode):
-                xbmc.executebuiltin("XBMC.SetVolume(%d,true)" % self.volumeLevelPartyMode)
 
     def activateVisualisation(self):
         if self.visualisationPartymode:
@@ -120,7 +124,6 @@ class Main:
         conutdownDlg.close()
 
         return finished
-
 
 class serviceMonitor(xbmc.Monitor):
     def __init__(self, onSettingsChangedAction=None, onScreensaverActivatedAction=None):

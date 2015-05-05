@@ -17,8 +17,7 @@
 		<setting id="visualisation-partymode" type="bool" label="30040" default="false"/>
 		<setting id="delay-visualisation-partymode" type="slider" label="30041" subsetting="true" default="6" range="0,120" option="int" enable="eq(-1,true)"/>
 		<setting label="30014" type="lsep"/>
-		<setting id="volume-partymode" type="bool" label="30046" default="false"/>
-		<setting id="volume-level-partymode" subsetting="true" type="slider" label="30044" default="100" range="0,100" option="int" enable="eq(-1,true)"/>
-		<setting id="volume-bar-partymode" subsetting="true" type="bool" label="30045" default="false" enable="eq(-2,true)"/>
+		<setting id="volume-partymode" type="bool" label="30044" default="false"/>
+		<setting id="volume-level-partymode" subsetting="true" type="slider" label="30045" default="100" range="0,100" option="int" enable="eq(-1,true)"/>
 	</category>
 </settings>
