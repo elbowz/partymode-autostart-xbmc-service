@@ -43,6 +43,10 @@ msgctxt "#30013"
 msgid "Run Playlist"
 msgstr ""
 
+msgctxt "#30014"
+msgid "Volume Adjust"
+msgstr ""
+
 # setting items
 msgctxt "#30040"
 msgid "Enable"
@@ -58,6 +62,18 @@ msgstr ""
 
 msgctxt "#30043"
 msgid "Select a playlist"
+msgstr ""
+
+msgctxt "#30044"
+msgid "Volume (%)"
+msgstr ""
+
+msgctxt "#30045"
+msgid "Show Volume Bar"
+msgstr ""
+
+msgctxt "#30046"
+msgid "Enable Volume Adjust"
 msgstr ""
 
 # ADDON STRINGS
