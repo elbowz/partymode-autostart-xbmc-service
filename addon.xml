@@ -5,6 +5,7 @@
        provider-name="muttley">
     <requires>
         <import addon="xbmc.python" version="2.12.0"/>
+        <import addon="script.favourites" version="6.0.3"/>
     </requires>
     <extension point="xbmc.service" library="PartymodeAutostart.py" start="login"/>
     <extension point="xbmc.python.script" library="main.py">
