@@ -80,7 +80,7 @@ msgctxt "#30046"
 msgid "Select from Favourites"
 msgstr ""
 
-msgctxt "#30047"
+msgctxt "#30054"
 msgid "Play in party mode"
 msgstr ""
 

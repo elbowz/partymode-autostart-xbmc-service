@@ -9,7 +9,7 @@
 		<setting id="avoid-on-pause-start-on-screensaver-partymode" type="bool" label="30042" subsetting="true" default="true" enable="eq(-1,true)"/>
 		<setting label="30013" type="lsep"/>
 		<setting id="startup-playlist" type="bool" label="30040" default="false"/>
-		<setting id="startup-playlist-partymode" type="bool" label="30047" default="false"/>
+		<setting id="startup-playlist-partymode" type="bool" label="30054" default="false"/>
 		<setting type="action" label="30043" action="Skin.SetFile(Startup.Playlist.Path,,special://musicplaylists/)"/>
 		<setting id="startup-playlist-path" type="text" label="$INFO[Skin.String(Startup.Playlist.Path)]" value="$INFO[Skin.String(Startup.Playlist.Path)]" enable="false"/>
 		<setting label="30015" type="lsep"/>
