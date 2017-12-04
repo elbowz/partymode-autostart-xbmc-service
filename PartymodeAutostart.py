@@ -46,6 +46,7 @@ class Main:
         self.startOnScreensaverPartyMode                = __addon__.getSetting('start-on-screensaver-partymode') == 'true'
         self.avoidOnPauseStartOnScreensaverPartyMode    = __addon__.getSetting('avoid-on-pause-start-on-screensaver-partymode') == 'true'
         self.startupPlaylist                            = __addon__.getSetting('startup-playlist') == 'true'
+        self.startupPlaylistPartymode                   = __addon__.getSetting('startup-playlist-partymode') == 'true'
         self.startupPlaylistPath                        = xbmc.getInfoLabel( "Skin.String(Startup.Playlist.Path)" )
         self.startupFavourites                          = __addon__.getSetting('startup-favourites') == 'true'
         self.startupFavouritesPath                      = xbmc.getInfoLabel('Skin.String(Startup.Favourites.Path)')
@@ -67,7 +68,10 @@ class Main:
 
             log('Start Playlist: ' + self.startupPlaylistPath)
 
-            xbmc.executebuiltin("XBMC.PlayMedia(" + self.startupPlaylistPath + ")")
+            if self.startupPlaylistPartymode:
+                xbmc.executebuiltin("XBMC.PlayerControl(PartyMode(" + self.startupPlaylistPath + ")")
+            else:
+                xbmc.executebuiltin("XBMC.PlayMedia(" + self.startupPlaylistPath + ")")
 
         elif self.startupFavourites:
 
