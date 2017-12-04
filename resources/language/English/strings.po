@@ -127,5 +127,13 @@ msgid "Countdown"
 msgstr ""
 
 msgctxt "#30102"
-msgid "PartyMode start in %s seconds:"
+msgid "PartyMode auto-start in %s seconds:"
+msgstr ""
+
+msgctxt "#30103"
+msgid "Playlist auto-start in %s seconds:"
+msgstr ""
+
+msgctxt "#30104"
+msgid "Favourite auto-start in %s seconds:"
 msgstr ""

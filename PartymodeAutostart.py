@@ -131,7 +131,13 @@ class Main:
 
     def _viewCountdown(self):
         conutdownDlg = xbmcgui.DialogProgress()
-        conutdownDlg.create( __language__(30101), __language__(30102) % self.delayStartupPartyMode)
+        if self.startupPlaylist:
+            msg = 30103
+        elif self.startupFavourites:
+            msg = 30104
+        else:
+            msg = 30102
+        conutdownDlg.create( __language__(30101), __language__(msg) % self.delayStartupPartyMode)
 
         finished = True
         countdownGap = 100
